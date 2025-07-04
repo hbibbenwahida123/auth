@@ -1,0 +1,3 @@
+export const GETALLPOSTS = "GETALLPOSTS"
+export const GETONEPOST = " GETONEPOST"
+export const GETMYPOSTS = "GETMYPOSTS"

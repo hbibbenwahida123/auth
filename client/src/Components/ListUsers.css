@@ -1,0 +1,461 @@
+/* Container principal */
+.users-list-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--pure-black) 0%, var(--dark-gray) 100%);
+  padding: 2rem;
+}
+
+.users-list-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.users-list-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--medium-gray) 0%, var(--dark-gray) 100%);
+  border: 2px solid var(--primary-yellow);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.users-list-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 215, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.users-list-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-yellow);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.users-list-title i {
+  font-size: 2rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.users-list-subtitle {
+  font-size: 1.1rem;
+  color: var(--off-white);
+  opacity: 0.9;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+/* Grille des utilisateurs */
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Carte utilisateur */
+.user-card {
+  background: linear-gradient(135deg, var(--medium-gray) 0%, var(--dark-gray) 100%);
+  border: 2px solid var(--primary-yellow);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.user-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 215, 0, 0.05);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.user-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.2);
+  border-color: var(--secondary-yellow);
+}
+
+.user-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Header de la carte */
+.user-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.user-avatar-container {
+  position: relative;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-yellow);
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.user-card:hover .user-avatar {
+  border-color: var(--secondary-yellow);
+  transform: scale(1.05);
+}
+
+.user-status {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background: #4CAF50;
+  border-radius: 50%;
+  border: 3px solid var(--medium-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-status i {
+  font-size: 0.5rem;
+  color: white;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-yellow);
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.user-email {
+  color: var(--off-white);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.user-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 215, 0, 0.1);
+  color: var(--primary-yellow);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--primary-yellow);
+}
+
+.user-role i {
+  font-size: 0.7rem;
+}
+
+/* Détails utilisateur */
+.user-details {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  border: 1px solid var(--medium-gray);
+}
+
+.user-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--light-gray);
+  font-size: 0.9rem;
+}
+
+.user-stat:last-child {
+  margin-bottom: 0;
+}
+
+.user-stat i {
+  color: var(--primary-yellow);
+  font-size: 0.8rem;
+  width: 16px;
+  text-align: center;
+}
+
+/* Actions */
+.user-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.user-btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.user-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.user-btn:hover::before {
+  left: 100%;
+}
+
+.user-btn-view {
+  background: linear-gradient(45deg, var(--primary-yellow), var(--secondary-yellow));
+  color: var(--pure-black);
+  box-shadow: 0 3px 10px rgba(255, 215, 0, 0.3);
+}
+
+.user-btn-view:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.5);
+  color: var(--pure-black);
+  text-decoration: none;
+}
+
+.user-btn-delete {
+  background: transparent;
+  color: #ff6b6b;
+  border: 2px solid #ff6b6b;
+  box-shadow: 0 3px 10px rgba(255, 107, 107, 0.2);
+}
+
+.user-btn-delete:hover {
+  background: #ff6b6b;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+  text-decoration: none;
+}
+
+/* États de chargement et vide */
+.users-loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--primary-yellow);
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--medium-gray);
+  border-top: 4px solid var(--primary-yellow);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.users-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--light-gray);
+  background: linear-gradient(135deg, var(--medium-gray) 0%, var(--dark-gray) 100%);
+  border: 2px solid var(--primary-yellow);
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 500px;
+}
+
+.users-empty i {
+  font-size: 3rem;
+  color: var(--primary-yellow);
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.users-empty h3 {
+  color: var(--primary-yellow);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.users-empty p {
+  color: var(--off-white);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* Animation d'entrée */
+.users-list-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.user-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.user-card:nth-child(1) { animation-delay: 0.1s; }
+.user-card:nth-child(2) { animation-delay: 0.2s; }
+.user-card:nth-child(3) { animation-delay: 0.3s; }
+.user-card:nth-child(4) { animation-delay: 0.4s; }
+.user-card:nth-child(5) { animation-delay: 0.5s; }
+.user-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .users-list-container {
+    padding: 1rem;
+  }
+  
+  .users-list-header {
+    padding: 1.5rem;
+  }
+  
+  .users-list-title {
+    font-size: 2rem;
+  }
+  
+  .users-list-title i {
+    font-size: 1.5rem;
+  }
+  
+  .users-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .user-card {
+    padding: 1.5rem;
+  }
+  
+  .user-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .user-actions {
+    flex-direction: column;
+  }
+  
+  .user-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .users-list-header {
+    padding: 1rem;
+  }
+  
+  .users-list-title {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .users-list-title i {
+    font-size: 1.3rem;
+  }
+  
+  .user-card {
+    padding: 1rem;
+  }
+  
+  .user-avatar {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .user-name {
+    font-size: 1.1rem;
+  }
+  
+  .user-email {
+    font-size: 0.8rem;
+  }
+  
+  .user-details {
+    padding: 0.75rem;
+  }
+  
+  .user-stat {
+    font-size: 0.8rem;
+  }
+} 

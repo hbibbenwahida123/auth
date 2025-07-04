@@ -6,6 +6,8 @@ exports.validSignUp = [
     body ('password', 'Your password must contain 8 char ').isLength({min : 8})
 ]
 
+
+
 exports.validSignIn = [
      body ('email', 'Not a valid email ').isEmail(),
     body ('password', 'Your password must contain 8 char ').isLength({min : 8})

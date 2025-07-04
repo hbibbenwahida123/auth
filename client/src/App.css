@@ -1,0 +1,151 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #10b981;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Override Bootstrap colors with green theme */
+.btn-primary {
+  background: linear-gradient(45deg, #10b981, #059669) !important;
+  border-color: #10b981 !important;
+  box-shadow: 0 3px 10px rgba(16, 185, 129, 0.3) !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #059669, #047857) !important;
+  border-color: #059669 !important;
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.5) !important;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: linear-gradient(45deg, #6b7280, #4b5563) !important;
+  border-color: #6b7280 !important;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(45deg, #4b5563, #374151) !important;
+  border-color: #4b5563 !important;
+}
+
+.btn-danger {
+  background: linear-gradient(45deg, #ef4444, #dc2626) !important;
+  border-color: #ef4444 !important;
+  box-shadow: 0 3px 10px rgba(239, 68, 68, 0.3) !important;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(45deg, #dc2626, #b91c1c) !important;
+  border-color: #dc2626 !important;
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.5) !important;
+  transform: translateY(-2px);
+}
+
+/* Navbar styling */
+.navbar {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: white !important;
+}
+
+/* Form styling */
+.form-control:focus {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.25) !important;
+}
+
+/* Card styling */
+.card {
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 15px !important;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%) !important;
+  color: white !important;
+  border-radius: 15px 15px 0 0 !important;
+  border-bottom: none !important;
+}
+
+/* Modal styling */
+.modal-header {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%) !important;
+  color: white !important;
+  border-radius: 15px 15px 0 0 !important;
+  border-bottom: none !important;
+}
+
+.modal-content {
+  border-radius: 15px !important;
+  border: none !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Alert styling */
+.alert-success {
+  background: linear-gradient(45deg, #10b981, #059669) !important;
+  border-color: #10b981 !important;
+  color: white !important;
+}
+
+.alert-danger {
+  background: linear-gradient(45deg, #ef4444, #dc2626) !important;
+  border-color: #ef4444 !important;
+  color: white !important;
+}
+
+/* Badge styling */
+.badge-primary {
+  background: linear-gradient(45deg, #10b981, #059669) !important;
+}
+
+.badge-danger {
+  background: linear-gradient(45deg, #ef4444, #dc2626) !important;
+}

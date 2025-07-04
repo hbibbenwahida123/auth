@@ -1,0 +1,181 @@
+/* Variables CSS pour le thème jaune, noir et blanc */
+:root {
+  --primary-yellow: #FFD700;
+  --secondary-yellow: #FFA500;
+  --dark-yellow: #FF8C00;
+  --pure-black: #000000;
+  --dark-gray: #1a1a1a;
+  --medium-gray: #333333;
+  --light-gray: #666666;
+  --pure-white: #FFFFFF;
+  --off-white: #F5F5F5;
+  --light-yellow: #FFF8DC;
+  --accent-yellow: #FFEB3B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, var(--pure-black) 0%, var(--dark-gray) 100%);
+  color: var(--pure-white);
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Styles globaux pour les boutons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--primary-yellow), var(--secondary-yellow));
+  color: var(--pure-black);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+  color: var(--pure-black);
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background: linear-gradient(45deg, var(--medium-gray), var(--light-gray));
+  color: var(--pure-white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  color: var(--pure-white);
+  text-decoration: none;
+}
+
+.btn-danger {
+  background: linear-gradient(45deg, #dc3545, #c82333);
+  color: var(--pure-white);
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.5);
+  color: var(--pure-white);
+  text-decoration: none;
+}
+
+/* Styles pour les cartes */
+.card {
+  background: linear-gradient(135deg, var(--medium-gray) 0%, var(--dark-gray) 100%);
+  border: 2px solid var(--primary-yellow);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.2);
+  border-color: var(--secondary-yellow);
+}
+
+/* Styles pour les formulaires */
+.form-control {
+  background: var(--dark-gray);
+  border: 2px solid var(--light-gray);
+  border-radius: 10px;
+  color: var(--pure-white);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-yellow);
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+  background: var(--medium-gray);
+}
+
+.form-control::placeholder {
+  color: var(--light-gray);
+}
+
+/* Styles pour les liens */
+a {
+  color: var(--primary-yellow);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-yellow);
+  text-decoration: underline;
+}
+
+/* Styles pour les titres */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-yellow);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Animation globale */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-yellow);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-yellow);
+}
